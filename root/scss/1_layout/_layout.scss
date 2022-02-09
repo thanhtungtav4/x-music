@@ -3,7 +3,7 @@
 ------------------------------------------------------------*/
 .l-main {
 	width: 100%;
-	min-height: 600px;
+	max-height: 100vh;
 	color: $color1;
-	@include flex-center;
+	@include flex-jbetween;
 }

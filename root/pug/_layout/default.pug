@@ -18,8 +18,8 @@ html
   body
     .container
       include ../_modules/header
-      include ../_modules/navbar
       main.l-main
+        include ../_modules/navbar
         block container
       include ../_modules/sidebar
     script(src=path+"assets/js/common.js")

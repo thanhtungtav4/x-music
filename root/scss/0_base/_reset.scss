@@ -2,6 +2,12 @@
 /*------------------------------------------------------------
 	Reset
 ------------------------------------------------------------*/
+:root {
+	--primary-color: #ffc876;
+	--text-color: #676669;
+	--second-color: #092c3e;
+	--third-color: #121212;
+}
 html,
 body,
 div,
@@ -161,7 +167,8 @@ del {
 }
 
 img {
-	vertical-align: top;
+	vertical-align: middle;
+	display: block;
 }
 
 a {
