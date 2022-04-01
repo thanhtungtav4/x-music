@@ -2,8 +2,74 @@
 	Footer
 ------------------------------------------------------------*/
 .c-footer {
-	width: 100%;
-	padding: 50px 0;
-	text-align: center;
-	background: $color3;
+	margin-top: 4rem;
+    width: 100%;
+    position: relative;
+    font-size: 13px;
+	&__inner{
+		@include flex;
+		padding: 20px;
+	}
+	&__top{
+		background-color: var(--footer-color_top);
+		padding: 20px 0;
+		width: 100%;
+		li{
+			margin-right: 16px;
+			a{
+				color: var(--text-color);
+				font-size: 14px;
+				font-weight: 600;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+		}
+	}
+	&__middle{
+		color: var(--text-color);
+		padding: 20px 0;
+		background: (var(--footer-middle));
+		dl{
+			width: 25%;
+			font-size: 1.3rem;
+			@include sp{
+				width: 50%;
+				margin-bottom: 2rem;
+			}
+			dt{
+				font-weight: 600;
+			}
+			dd{
+				margin-top: 8px;
+				a{
+					text-decoration: none;
+					color: var(--text-color);
+				}
+			}
+		}
+	}
+	&__bottom{
+		background-color: var(--footer-color_top);
+		padding: 20px 0;
+		.c-footer__inner{
+			justify-content: space-between;
+		}
+		p{
+			color: var(--text-color);
+			@include sp{
+				order: 2;
+			}
+			&:nth-last-child(1){
+				text-align: end;
+				@include sp{
+					text-align: left;
+					margin-top: 1.2rem;
+				}
+			}
+		}
+		a{
+			color: var(--text-color);
+			text-decoration: none;
+		}
+	}
 }

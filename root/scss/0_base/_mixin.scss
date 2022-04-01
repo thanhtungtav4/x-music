@@ -13,12 +13,10 @@
 /*------------------------------------------------------------
 	Font
 ------------------------------------------------------------*/
-@mixin mincyo() {
-	font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3","Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+@mixin Montserrat() {
+	font-family: "Montserrat",sans-serif;
 }
-@mixin mincho() {
-	font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3","Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
-}
+
 
 /*------------------------------------------------------------
 	Media
@@ -38,6 +36,12 @@
 		@content;
 	}
 }
+@mixin tb {
+	@media screen and (max-width: #{$breakpoint2}) {
+		@content;
+	}
+}
+
 
 /*------------------------------------------------------------
 	Flex Box

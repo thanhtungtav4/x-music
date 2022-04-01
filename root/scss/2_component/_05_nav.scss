@@ -1,34 +1,82 @@
 /*------------------------------------------------------------
 	Navi
 ------------------------------------------------------------*/
-.p-nav{
-	padding: 3rem;
-	align-items: center;
-	width: 280px;
-	height: 100vh;
-	max-height: 100vh;
-	display: block;
-	background-color: #fff;
-	&__logo{
-		@include flex-jbetween;
-		align-items: center;
-		margin: 0 0 2rem 0;
-		img{
-			height: 50px;
+.navbar{
+	background-color: var(--bkg-color);
+	box-shadow: 0 1px var(--shadow-color);
+	&__inner{
+		 @include flex-jbetween;
+		 align-items: center;
+		 height: 78px;
+	}	
+	&__toggle{
+		width: 34px;
+		height: 34px;
+		background: var(--icon_toggle) 50% no-repeat;
+		margin-right: 196px;
+		cursor: pointer;
+		transition: all .35s ease;
+		@include sp{
+			margin-right: 0;
+			width: 42px;
+		}
+		&:hover{
+			transform: rotate(30deg);
 		}
 	}
-	&__list{
-		a{
-			@include flex;
-			text-decoration: none;
-			font-size: 1.5rem;
-			color: var(--text-color);
-			span {
-				margin-left: 1.3rem;
+	&__logo{
+		height: 62px;
+		width: 145px;
+		background: var(--img_logo) 50% no-repeat;
+		background-size:contain;
+	}
+	&__search{
+		cursor: pointer;
+		margin-right: 0;
+		width: 100%;
+		max-width: 230px;
+		position: relative;
+		@include sp{
+			width: unset;
+		}
+		&_txt{
+			// width: 230px;
+			display: block;
+			height: 42px;
+			line-height: 42px;
+			padding: 0 42px 0 21px;
+			border-radius: 21px;
+			background: #ededed;
+			border: none;
+			outline: none;
+			box-shadow: none;
+			color: #21252999;
+			@include sp{
+				padding-right: 0px;
+				padding-left: 0px;
+				width: 42px;
+				color: transparent;
+			}
+			&:active {
+				outline: none;
+				box-shadow: none;
 			}
 		}
-	}
-	&__ttl{
-		margin: 1rem 0 1.5rem;
+		&_btn{
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 42px;
+			height: 42px;
+			background: url(../../assets/images/icon-search.svg) center no-repeat;
+			border: none;
+			overflow: hidden;
+			text-indent: -999px;
+			box-shadow: none;
+			&:active {
+				outline: none;
+				box-shadow: none;
+			}	
+		}
 	}
 }

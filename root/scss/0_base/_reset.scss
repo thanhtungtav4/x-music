@@ -1,13 +1,37 @@
 @charset 'utf-8';
+body {
+	--text-color: #222;
+	--bkg-color: #fff;
+	--shadow-color: #eee;
+	--footer-color_top: #e5e5e5;
+	--footer-middle: #f1f1f1;
+	--icon_toggle: url(../../assets/images/icon-toggle.svg);
+	--img_logo: url(../../assets/images/logo.svg);
+  }
+  body.dark-theme {
+	--text-color: #eee;
+	--bkg-color: #121212;
+	--shadow-color: #121212;
+	--footer-color_top: #121212;
+	--footer-middle: #0a0a0a;
+	--icon_toggle: url(../../assets/images/icon-toggle_w.svg);
+	--img_logo: url(../../assets/images/logo-w.svg);
+  }
+  
+  @media (prefers-color-scheme: dark) {
+	/* defaults to dark theme */
+	body {
+	  --text-color: #eee;
+	  --bkg-color: #121212;
+	}
+	body.light-theme {
+	  --text-color: #222;
+	  --bkg-color: #fff;
+	}
+  }
 /*------------------------------------------------------------
 	Reset
 ------------------------------------------------------------*/
-:root {
-	--primary-color: #ffc876;
-	--text-color: #676669;
-	--second-color: #092c3e;
-	--third-color: #121212;
-}
 html,
 body,
 div,
@@ -121,8 +145,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ",
-		"Meiryo", sans-serif;
+	font-family: "Montserrat",sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -167,8 +190,7 @@ del {
 }
 
 img {
-	vertical-align: middle;
-	display: block;
+	vertical-align: top;
 }
 
 a {
